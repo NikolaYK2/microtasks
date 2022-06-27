@@ -5,8 +5,8 @@ type ButtonUniversalTypeProps = {
     callBack:()=>void,
 }
 
-export const ButtonUniversal = (props: ButtonUniversalTypeProps) => {
-    const onClickHandler = () => {
+export const ButtonUniversal = (props: ButtonUniversalTypeProps) => { /*- компонента*/
+    const onClickHandler = () => { /*- костяк для кнопки*/
         props.callBack();
     }
     return (

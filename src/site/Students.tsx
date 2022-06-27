@@ -12,7 +12,7 @@ type StudentsTypeProps = {
 export const Students = (props: StudentsTypeProps) => {
     return (
         <ul>
-            {props.students.map((student, index) => {
+            {props.students.map((student) => {
                 return (
                     <li key={student.id}>
                         <span>{student.name}</span>
