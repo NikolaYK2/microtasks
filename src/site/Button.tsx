@@ -21,7 +21,7 @@ export const Button = () => {
     }
 
     // =============================Universal button=======================
-    const buttonChannelOne = (subscriber?: string, age?: number) => {
+    const buttonChannelOne = (subscriber: string, age?: number) => {
         console.log(subscriber, age);
     }
 // const buttonChannelTwo = (subscriber: string) => {

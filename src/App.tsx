@@ -4,6 +4,7 @@ import {RatingCars} from "./site/RatingCars";
 import {ArrayTypeStudents, Students} from "./site/Students";
 import {Button} from "./site/Button";
 import {ComponentMany} from "./ComponentMany";
+import {Input} from "./components/input/Input";
 
 // ==========================Students=========================
 const students: ArrayTypeStudents[] = [
@@ -21,7 +22,7 @@ const topCars = [
 ];
 
 // ===================== Money=======================================
-export type moneyArr = "All" | 'RUBLES' | 'Dollars' //- типизируем как бы массив
+export type moneyArr = "All" | 'RUBLES' | 'Dollars' //- типизируем как бы сортировку массива
 //======================================================================
 function App() {
     /*===============================Кнопки добавления и обнуления=========================*/
@@ -54,10 +55,10 @@ function App() {
 // ======================================================================Money============================
     let currentMoney = money; /*- копируем ссылку массива в переменную*/
     if (filter === "Dollars") {
-        currentMoney = money.filter((filteredMoney) => filteredMoney.banknots === "Dollars");
+        currentMoney = money.filter((filteredMoney) => filteredMoney.banknots === filter);
     }
     if (filter === "RUBLES") {
-        currentMoney = money.filter((filteredMoney) => filteredMoney.banknots === "RUBLES");
+        currentMoney = money.filter((filteredMoney) => filteredMoney.banknots === filter);
     }
     // ========================FunctionButtonMoney===========================================
     const onClickFilterHandler = (cash: moneyArr) => {
@@ -79,7 +80,9 @@ function App() {
             <hr/>
             {/*==================================Money================================================*/}
             <ComponentMany money={money} currentMoney={currentMoney} callBack={onClickFilterHandler}/>
-            {/*===================================================================================*/}
+            <hr/>
+            {/*===============================lesson INPUT====================================================*/}
+            <Input/>
         </div>
     );
 }
